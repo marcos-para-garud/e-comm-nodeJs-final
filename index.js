@@ -10,7 +10,7 @@ import cartRouter from './transaction in MongoDb-IV/src/features/cartItems/cartI
 import apiDocs from './transaction in MongoDb-IV/swagger.json' assert { type: 'json' };
 import loggerMiddleware from './transaction in MongoDb-IV/src/middlewares/logger.middleware.js';
 import { ApplicationError } from './transaction in MongoDb-IV/src/error-handler/applicationError.js';
-import {connectToMongoDB} from './transaction in MongoDb-IV/src/config/mongodb.js';
+import {connectDatabase} from './transaction in MongoDb-IV/src/config/mongodb.js';
 import orderRouter from './transaction in MongoDb-IV/src/features/order/order.routes.js';
 
 // 2. Create Server
@@ -92,6 +92,6 @@ server.use((req, res) => {
 // 5. Specify port.
 server.listen(3200, ()=>{
   console.log('Server is running at 3200');
-  connectToMongoDB();
+  connectDatabase();
 });
 

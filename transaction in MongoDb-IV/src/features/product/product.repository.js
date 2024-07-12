@@ -12,7 +12,7 @@ class ProductRepository{
     async add(newProduct){
         try{
             // 1. Get the db.
-            const db = getDB();
+            const db = await getDB();
             const collection = db.collection(this.collection);
             await collection.insertOne(newProduct);
             return newProduct
@@ -24,7 +24,7 @@ class ProductRepository{
 
     async getAll(){
         try{
-            const db = getDB();
+            const db = await getDB();
             const collection = db.collection(this.collection);
             const products = await collection.find().toArray();
             console.log(products);
@@ -37,7 +37,7 @@ class ProductRepository{
 
     async get(id){
         try{
-            const db = getDB();
+            const db = await getDB();
             const collection = db.collection(this.collection);
             return await collection.findOne({_id: new ObjectId(id)});
         }catch(err){
@@ -49,7 +49,7 @@ class ProductRepository{
     // Product hosuld have min price specified and category
     async filter(minPrice, categories){
         try{
-            const db = getDB();
+            const db = await getDB();
             const collection = db.collection(this.collection); 
             let filterExpression={};
             if(minPrice){
@@ -103,7 +103,7 @@ class ProductRepository{
 
 async rate(userID, productID, rating){
     try{
-        const db = getDB();
+        const db = await getDB();
         const collection = db.collection(this.collection); 
         
         // 1. Removes existing entry
@@ -128,7 +128,7 @@ async rate(userID, productID, rating){
 
 async averageProductPricePerCategory(){
     try{
-        const db=getDB();
+        const db= await getDB();
         return await db.collection(this.collection)
             .aggregate([
                 {

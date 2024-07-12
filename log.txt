@@ -4,3 +4,7 @@
  Fri Jul 12 2024 22:49:06 GMT+0530 (India Standard Time) - /api/users/signup - {"name":"aditi","email":"seller71@ecom.com","password":"Password61","type":"seller"}
  Fri Jul 12 2024 23:56:28 GMT+0530 (India Standard Time) - /api/users/signup - {"name":"aditi-akash","email":"sel@ecom.com","password":"Password61","type":"seller"}
  Sat Jul 13 2024 01:16:30 GMT+0530 (India Standard Time) - /api/users/signup - {"name":"agrawal","email":"sel@ecom.com","password":"2002","type":"customer"}
+ Sat Jul 13 2024 01:44:18 GMT+0530 (India Standard Time) - /api/users/signup - {"name":"asdddf","email":"sel@ecom.com","password":"34556","type":"customer"}
+ Sat Jul 13 2024 01:48:04 GMT+0530 (India Standard Time) - /api/users/signup - {"name":"asddffghhjjjddf","email":"sel@ecom.com","password":"34556","type":"customer"}
+ Sat Jul 13 2024 01:55:10 GMT+0530 (India Standard Time) - /api/products/rate?userID=2&productID=1&rating=4 - {}
+ Sat Jul 13 2024 01:55:59 GMT+0530 (India Standard Time) - /api/users/signup - {"name":"jj","email":"sel@ecom.com","password":"34556","type":"customer"}

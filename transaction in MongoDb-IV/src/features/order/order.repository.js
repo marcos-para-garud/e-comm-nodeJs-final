@@ -13,7 +13,7 @@ export default class OrderRepository{
         const session = client.startSession();
         try{
         
-        const db = getDB();
+        const db = await getDB();
         session.startTransaction();
         // 1. Get cartitems and calculate total amount.
         const items = await this.getTotalAmount(userId, session);
@@ -48,7 +48,7 @@ export default class OrderRepository{
     }
 
     async getTotalAmount(userId, session){
-        const db = getDB();
+        const db = await getDB();
         const items = await db.collection("cartItems").aggregate([
             // 1. Get cart items for the user
             {

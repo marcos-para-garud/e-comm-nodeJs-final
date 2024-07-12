@@ -10,7 +10,7 @@ export default class CartItemsRepository{
     
     async add(productID, userID, quantity){
         try{
-            const db = getDB();
+            const db = await getDB();
             const collection = db.collection(this.collection)
             const id = await this.getNextCounter(db);
             // find the document
@@ -33,7 +33,7 @@ export default class CartItemsRepository{
 
     async get(userID){
         try{
-            const db = getDB();
+            const db = await getDB();
             const collection = db.collection(this.collection)
             return await collection.find({userID:new ObjectId(userID)}).toArray();
         }catch(err){
@@ -44,7 +44,7 @@ export default class CartItemsRepository{
 
     async delete(userID, cartItemID){
         try{
-            const db = getDB();
+            const db = await getDB();
             const collection = db.collection(this.collection)
             const result = await collection.deleteOne({_id: new ObjectId(cartItemID), userID: new ObjectId(userID)});
             return result.deletedCount>0;
