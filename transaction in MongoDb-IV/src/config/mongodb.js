@@ -9,7 +9,7 @@ console.log("URL: "+url);
 
 let client;
 export const connectToMongoDB = ()=>{
-    MongoClient.connect(url)
+    MongoClient.connect(url,{ useNewUrlParser: true, useUnifiedTopology: true })
         .then(clientInstance=>{
             client=clientInstance
             console.log("Mongodb is connected");
