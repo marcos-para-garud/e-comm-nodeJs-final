@@ -1,0 +1,4 @@
+
+ Fri Jul 12 2024 14:26:26 GMT+0530 (India Standard Time) - /api/users/signup - {"email":"seller5@ecom.com","password":"Password5"}
+ Fri Jul 12 2024 14:27:48 GMT+0530 (India Standard Time) - /api/users/signup - {"name":"akash","email":"seller61@ecom.com","password":"Password61","type":"seller"}
+ Fri Jul 12 2024 22:49:06 GMT+0530 (India Standard Time) - /api/users/signup - {"name":"aditi","email":"seller71@ecom.com","password":"Password61","type":"seller"}
