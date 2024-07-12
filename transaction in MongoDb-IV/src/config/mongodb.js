@@ -13,8 +13,8 @@ export const connectToMongoDB = ()=>{
         .then(clientInstance=>{
             client=clientInstance
             console.log("Mongodb is connected");
-            createCounter(client.db());
-            createIndexes(client.db());
+            createCounter(client.db("ecomdb"));
+            createIndexes(client.db("ecomdb"));
         })
         .catch(err=>{
             console.log(err);
@@ -26,7 +26,8 @@ export const getClient = ()=>{
 }
 
 export const getDB = ()=>{
-    return client.db();
+     return client.db("ecomdb");
+    
 }
 
 const createCounter = async(db)=>{
