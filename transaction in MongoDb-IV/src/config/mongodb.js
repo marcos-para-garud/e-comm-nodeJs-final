@@ -22,7 +22,7 @@ console.log("URL: "+url);
 // }
 
 export async function connectDatabase() {
-     client = new MongoClient(url, { useNewUrlParser: true, useUnifiedTopology: true });
+     client = new MongoClient(url, { useNewUrlParser: true, useUnifiedTopology: true , ssl:false});
 
     try {
         await client.connect();
